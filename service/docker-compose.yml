@@ -17,6 +17,23 @@ services:
     ports:
       - 8080:8080
 
+  widget3:
+    image: localhost:5000/widget2
+    environment:
+      CONFIG: > 
+        {
+          "service":"multilinenev"
+        }
+    ports:
+      - 8080:8080
+
+  widget4:
+    image: localhost:5000/widget2
+    env_file: 
+      - config.env
+    ports:
+      - 8080:8080
+
   service: 
     build: .
     ports:

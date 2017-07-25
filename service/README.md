@@ -49,6 +49,21 @@ CONFIG=$(cat config.json) docker-compose up widget2
 CONFIG='{"service":"https://widget2.example"}' docker-compose up widget2
 ```
 
+## Widget3
+onrun add json string to your docker-compose
+
+```sh
+docker-compose up widget3
+```
+
+## Widget4
+onrun docker-compose env_file
+
+```sh
+docker-compose up widget4
+```
+
+
 # Misc
 
 Start the docker registry
