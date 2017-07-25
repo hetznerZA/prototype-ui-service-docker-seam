@@ -1,0 +1,24 @@
+version: "2.1"
+services: 
+
+  widget1:
+    build:
+      context: .
+      dockerfile: Dockerfile.widget1
+    environment:
+      - CONFIG_FILE=widget1_config.json
+    ports:
+      - 8080:8080
+
+  widget2:
+    image: localhost:5000/widget2
+    environment:
+      - CONFIG
+    ports:
+      - 8080:8080
+
+  service: 
+    build: .
+    ports:
+      - 3000:3000
+

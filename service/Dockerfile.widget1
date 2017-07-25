@@ -1,0 +1,2 @@
+FROM localhost:5000/widget1-onbuild
+ONBUILD ADD $CONFIG_FILE /usr/local/src/$CONFIG_FILE

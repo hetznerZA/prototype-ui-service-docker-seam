@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+
+  widget_service:
+    image: localhost:5000/service
+    ports:
+      - 3000:3000
+
+  widget2:
+    build: 
+      context: .
+    environment:
+      - CONFIG
+    ports:
+      - 8080:8080
+
+

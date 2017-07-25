@@ -1,0 +1,28 @@
+version: "2.1"
+services:
+
+  widget_service:
+    image: localhost:5000/service
+    ports:
+      - 3000:3000
+
+  widget1:
+    build: 
+      context: .
+    environment:
+      - CONFIG_FILE=config.json
+    ports:
+      - 8080:8080
+
+  widget1-onbuild:
+    build: 
+      context: .
+      dockerfile: Dockerfile.onbuild
+    environment:
+      - CONFIG_FILE=config.json
+    ports:
+      - 8080:8080
+
+
+
+

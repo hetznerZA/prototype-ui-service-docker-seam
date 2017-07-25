@@ -1,0 +1,22 @@
+{
+  "name": "widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@polymer/polymer": "^2.0.2",
+    "@webcomponents/shadycss": "^1.0.2",
+    "@webcomponents/webcomponentsjs": "^1.0.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "mustache": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo $CONFIG | mustache - index.mustache > index.html",
+    "start": "npm run build && http-server -a 0.0.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
